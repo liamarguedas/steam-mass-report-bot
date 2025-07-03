@@ -1,9 +1,3 @@
-
-
-
-
-import json
-import time
 from datetime import datetime
 
 from pathlib import Path
@@ -11,12 +5,8 @@ from pathlib import Path
 from steam.client import SteamClient
 from steam.guard import generate_twofactor_code
 
-from colorama import Fore, Back, Style, init
-
-
 import random
 import requests
-
 
 EXECUTION_TIME = datetime.now()
 
@@ -126,32 +116,8 @@ def main():
             logger(f"[{username}] Error occurred: {e}")
             loggins_failed += 1
                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        logger(f"[Successful] {reports_successful}")
+        logger(f"[Error] {reports_failed}")
 
 
 def load_comments():
